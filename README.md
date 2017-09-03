@@ -25,9 +25,9 @@ Tasks:
 
 Materials:
 * [12 factor - config](https://12factor.net/config)
-* [Node process] (https://nodejs.org/api/process.html)
-* [Koa web framework] (https://koajs.com)
-* [Koa Router] (https://github.com/alexmingoia/koa-router)
+* [Node process](https://nodejs.org/api/process.html)
+* [Koa web framework](https://koajs.com)
+* [Koa Router](https://github.com/alexmingoia/koa-router)
 * [Mocha test framework](https://mochajs.org)
 * [Chai assertion library](https://chaijs.com/api/bdd)
 
