@@ -1,0 +1,54 @@
+{
+    "name": "Risingstack-bootcamp",
+    "version": "1.0.0",
+    "description": "fork from risingstack-bootcamp",
+    "main": "index.js",
+    "scripts": {
+        "start": "node .",
+        "dev": "NODE_DEV=development nodemon .",
+        "test-web": "NODE_DEV=test PROCESS_TYPE=web mocha 'web/test.setup.js' 'web/**/*.spec.js'",
+        "test-worker": "NODE_DEV=test PROcESS_TYPE=worker mocha 'worker/test.setup.js' 'worker/**/*.spec.js'",
+        "test-models": "NODE_DEV=test mocha 'models/test.setup.js' 'models/**/*.spec.js'",
+        "test-only": "npm run test-web && npm run test-worker && npm run test-models",
+        "lint": "eslint .",
+        "test": "npm run lint && npm run test-only",
+        "migrate-db": "node ./scripts/migrate-db",
+        "trigger": "node ./scripts/trigger"
+    },
+    "repository": "git+https://github.com/hhao99/risingstack-bootcamp.git",
+    "author": "Eric Hao",
+    "license": "ISC",
+    "engines": {
+        "node": ">8.1.2"
+    },
+    "dependencies": {
+        "ioredis": "3.1.1",
+        "joi": "10.6.0",
+        "knex": "0.13.0",
+        "koa": "2.3.0",
+        "koa-bodyparser": "4.2.0",
+        "koa-compose": "4.0.0",
+        "koa-router": "7.2.1",
+        "lodash": "4.17.4",
+        "pg": "6.4.0",
+        "pg-connection-string": "0.1.3",
+        "qs": "6.5.0",
+        "request": "2.81.0",
+        "request-promise-native": "1.0.4",
+        "semver": "5.3.0",
+        "sinon": "2.3.6",
+        "sinon-chai": "2.11.0",
+        "winston": "2.3.1"
+    },
+    "devDependencies": {
+        "chai": "4.0.2",
+        "dotenv": "4.0.0",
+        "eslint": "4.0.0",
+        "eslint-config-airbnb-base": "11.2.0",
+        "eslint-plugin-import": "2.3.0",
+        "mocha": "3.4.2",
+        "nock": "9.0.13",
+        "nodemon": "1.11.0",
+        "super-request": "1.2.0"
+    }
+}
